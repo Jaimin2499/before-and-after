@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    transition: 1s;
+}
+
+.box1 {
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 10px 0px 20px black;
+}
+
+.box1::before {
+    content: '';
+    width: 100%;
+    height: 300px;
+    border: 5px dotted rgb(223, 0, 0);
+    position: absolute;
+    left: 100%;
+    bottom: 5px;
+    z-index: 1;
+    transition: 1s;
+    border-right: none;
+    border-left: none;
+}
+
+.box1:hover::before {
+    width: 50%;
+    height: 300px;
+    left: 45%;
+    transition: 1s;
+    border: 5px dotted rgb(236, 7, 7);
+    border-right: none;
+    border-left: none;
+}
+
+.box1::after {
+    content: '';
+    width: 100%;
+    height: 300px;
+    border: 5px solid rgb(223, 0, 0);
+    position: absolute;
+    left: 100%;
+    bottom: 5px;
+    z-index: 1;
+    transition: 1s;
+    border-left: none;
+    border-right: none;
+}
+
+.box1:hover::after {
+    width: 50%;
+    height: 300px;
+    left: 6%;
+    transition: 1s;
+    border: 5px solid rgb(236, 7, 7);
+    border-left: none;
+    border-right: none;
+}
+
+.box1:hover img {
+    width: 105%;
+    height: 310px;
+    transition: 1s;
+}
+
+.box2 {
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 10px 0px 20px black;
+}
+
+.box2::before {
+    content: '';
+    width: 15%;
+    height: 300px;
+    position: absolute;
+    background-color: rgba(255, 99, 71, 0.753);
+    bottom: -100%;
+    z-index: 1;
+    left: 0px;
+    transition: 0.8s;
+}
+
+.box2:hover::before {
+    content: '';
+    width: 15%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    transition: 0.8s;
+}
+
+.box2:hover img {
+    width: 105%;
+    height: 310px;
+    transition: 1s;
+}
